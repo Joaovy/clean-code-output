@@ -12,6 +12,18 @@ public class MoviesAppbad {
 
     static void main() {
 
+        add("The Shawshank Redemption", "Drama", "9.3");
+        add("The Godfather", "Crime", "9.2");
+        add("The Dark Knight", "Action", "9.0");
+        add("Punch drunk love", "Romance", "7.9");
+        add("The Room", "Drama", "3.7");
+
+        list();
+
+        System.out.println("Total movies: "+ count());
+        System.out.println("Average rating: "+ avg());
+
+        filter("Drama");
 
     }
 
@@ -41,5 +53,18 @@ public class MoviesAppbad {
         return sum / r.size();
     }
 
+    public static void filter(String genre){
+
+        System.out.println("\nFiltered movies by gnere: "+ genre);
+
+        for (int i = 0; i < g.size(); i++){
+            if(g.get(i).equals(genre)){
+                System.out.println(n.get(i) + " - " + g.get(i) + " - " + r.get(i));
+            }
+
+        }
+
+
+    }
 }
 
